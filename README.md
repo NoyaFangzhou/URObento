@@ -3,7 +3,7 @@ URObento
 
 # Functionality
 
-This is the website designed to serve all UR students, even all citizens in City of Rochester. We'd like to provide an Online delivery platform for all people so that they don't have to spend time searching for restaurant's phone numbers when they want to order an delivery service.
+This is the website designed to serve all UR students, even all citizens in City of Rochester. We'd like to provide an Online delivery platfor. People who want to order some meal at their home or office. If you can only order it by making a phone call. It cannot give you the direct opinion about the food unless you have been there personally. But with our website, people can see the picture and the gradients in the food and they also see the rates of the food and other customers’ commends. So it would give them more options. All they need to do is click on the buttons on the website, the restaurant will receive the order information. After the customers received the order, she/ he can rate it on the website. The restaurant owner also can manage the menu information online.
 
 This website provides three kind of user access
 
