@@ -38,11 +38,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="./index.html">Obento</a>
+                  <a class="navbar-brand" href="./index2.html">Obento</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <li class="active"><a href="./index.html">Home <span class="sr-only">(current)</span></a></li>
                     <li><a href="./join.html">Join</a></li>
@@ -57,60 +57,47 @@
                     <li><a href="./cart.html">My Cart</a></li><li><a href="./login.html">Log In</a></li>
                     <li><a href="./signup.html">Sign Up</a></li>
                   </ul>
-                </div><!-- /.navbar-collapse -->
+                </div> -- ><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
             </nav>
 
            
         </div>
-        <div class="container">
-            <h3 class="col-sm-12 text-left">Shopping Cart:</h3>
-            <div class="col-sm-offset-1 col-sm-10">
-              <div class="col-sm-3">
-                <img src="./img/sample.jpg" class="img-thumbnail" width="200" height="150" alt="Responsive image">
-              </div>
-              <div class="col-sm-5 text-left">
-                <p><label>dish name:</label>dish name </p>
-                <p><label>describe:</label> describe the dishes </p>
-                <p><label>restuarant:</label>asdasd</p>
-                <p><label>rate:</label>aasdasd</p><p><label>num:</label>2</p>
-                
-              </div>
-              <div class="col-sm-2 mx-auto">
-                <button class="btn btn-primary">Remove</button>
-              </div>
-            </div>
-            <div class="col-sm-offset-1 col-sm-10">
-              <div class="col-sm-3">
-                <img src="./img/sample.jpg" class="img-thumbnail" width="200" height="150" alt="Responsive image">
-              </div>
-              <div class="col-sm-5 text-left ">
-                <p><label>dish name:</label>dish name </p>
-                <p><label>describe:</label> describe the dishes </p>
-                <p><label>restuarant:</label>asdasd</p>
-                <p><label>rate:</label>aasdasd</p><p><label>num:</label>2</p>
 
+          <div class="inner cover">
+            <h1 class="cover-heading">View Tables</h1>
+            <form class="col-sm-12">
+              <div class="form-group col-sm-12">
+                <button class="btn btn-default" id="customer">View Customer</button>
               </div>
-              <div class="col-sm-2 mx-auto">
-                <button class="btn btn-primary">Remove</button>
+              <div class="form-group col-sm-12">
+                <button class="btn btn-default" id="owner">View Owner</button>
               </div>
-            </div>
-            <div class="col-sm-offset-1 col-sm-10">
-              <div class="col-sm-3">
-                <img src="./img/sample.jpg" class="img-thumbnail" width="200" height="150" alt="Responsive image">
+              <div class="form-group col-sm-12">
+                <button class="btn btn-default" id="restaurant">View Restaurant</button>
               </div>
-              <div class="col-sm-5 text-left">
-                <p><label>dish name:</label>dish name </p>
-                <p><label>describe:</label> describe the dishes </p>
-                <p><label>restuarant:</label>asdasd</p>
-                <p><label>rate:</label>aasdasd</p><p><label>num:</label>2</p>
+              <div class="form-group col-sm-12">
+                <button class="btn btn-default" id="restaurant_comm">View Restaurant Comment</button>
+              </div>
+              <div class="form-group col-sm-12">
+                <button class="btn btn-default" id="dish">View Dish</button>
+              </div>
+              <div class="form-group col-sm-12">
+                <button class="btn btn-default" id="dish_comm">View Dish Comment</button>
+              </div>
+              <div class="form-group col-sm-12">
+                <button class="btn btn-default" id="order">View Order</button>
+              </div>
+              <div class="form-group col-sm-12">
+                <button class="btn btn-default" id="order_detail">View Order Detail</button>
+              </div>
+            </form>
+          </div>
 
-              </div>
-              <div class="col-sm-2 mx-auto">
-                <button class="btn btn-primary">Remove</button>
-              </div>
-            </div>
-            
+          <div class="form-group col-sm-12">
+            <h1 id="result" align="center"></h1>
+          </div>
+
           <div class="mastfoot">
             
           </div>
@@ -126,5 +113,6 @@
     <!-- Placed at the end of the document so the pages    load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/show_table.js"></script>
   </body>
 </html>

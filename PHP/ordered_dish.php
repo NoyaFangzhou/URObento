@@ -18,8 +18,8 @@
 <div class="col-md-12 blog-main">
 <?php
 // DB setup
-require_once('../../../secure_dbsetup/db_setup.php');
-$sql = "USE tbiswas2_php;";
+require_once('db_setup.php');
+$sql = "USE ngu3;";
 if ($conn->query($sql) === TRUE) {
    // echo "using Database tbiswas2_company";
 } else {
@@ -27,14 +27,8 @@ if ($conn->query($sql) === TRUE) {
 }
 
 // Query:
-$sql = "SELECT * FROM Orded_Dish;";
+$sql = "SELECT * FROM UROB_Ordeddishes;";
 $result = $conn->query($sql);
-
-if ($result === TRUE) {
-    //echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-} 
 ?>
 <?php
 if($result->num_rows > 0){
@@ -42,16 +36,18 @@ if($result->num_rows > 0){
 <table>
 	<thead>
 		<tr>User ID</tr>
-		<tr>Username</tr>
+		<tr>Dish Name</tr>
 		<tr>Restaurant ID</tr>
 	</thead>
 	<tbody>
 <?php
 while ($row = $result->fetch_assoc()) {
 ?>
-	<tr><td><?php echo $row['userid'] ?></td></tr>
-	<tr><td><?php echo $row['username'] ?></td></tr>
-	<tr><td><?php echo $row['restaurand_id'] ?></td></tr>
+	<tr>
+		<td><?php echo $row['userid'] ?></td>
+		<td><?php echo $row['dname'] ?></td>
+		<td><?php echo $row['restaurant_id'] ?></td>
+	</tr>
 <?php
 }// end of while
 }// end of if
@@ -62,6 +58,8 @@ while ($row = $result->fetch_assoc()) {
 </div> <!-- end of blog-main -->	
 </div> <!-- end of row -->
 </div> <!-- end of container -->
-
+<?php
+$conn->close();
+?>
 </body>
 </html>

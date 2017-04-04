@@ -18,23 +18,16 @@
 <div class="col-md-12 blog-main">
 <?php
 // DB setup
-require_once('../../../secure_dbsetup/db_setup.php');
-$sql = "USE tbiswas2_php;";
+require_once('db_setup.php');
+$sql = "USE ngu3;";
 if ($conn->query($sql) === TRUE) {
    // echo "using Database tbiswas2_company";
 } else {
    echo "Error using  database: " . $conn->error;
 }
-
 // Query:
-$sql = "SELECT * FROM Customer;";
+$sql = "SELECT user_id, username, email, phone, address FROM UROB_Customer;";
 $result = $conn->query($sql);
-
-if ($result === TRUE) {
-    //echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-} 
 ?>
 <?php
 if($result->num_rows > 0){
@@ -51,11 +44,13 @@ if($result->num_rows > 0){
 <?php
 while ($row = $result->fetch_assoc()) {
 ?>
-	<tr><td><?php echo $row['userid'] ?></td></tr>
-	<tr><td><?php echo $row['username'] ?></td></tr>
-	<tr><td><?php echo $row['email'] ?></td></tr>
-	<tr><td><?php echo $row['phone'] ?></td></tr>
-	<tr><td><?php echo $row['address'] ?></td></tr>
+	<tr>
+		<td><?php echo $row['userid'] ?></td>
+		<td><?php echo $row['username'] ?></td>
+		<td><?php echo $row['email'] ?></td>
+		<td><?php echo $row['phone'] ?></td>
+		<td><?php echo $row['address'] ?></td>
+	</tr>
 <?php
 }// end of while
 }// end of if
@@ -66,6 +61,8 @@ while ($row = $result->fetch_assoc()) {
 </div> <!-- end of blog-main -->	
 </div> <!-- end of row -->
 </div> <!-- end of container -->
-
+<?php
+$conn->close();
+?>
 </body>
 </html>

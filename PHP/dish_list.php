@@ -16,8 +16,8 @@
 <h1 align="center">Dish Info</h1>
 <?php
 // DB setup
-require_once('../../../secure_dbsetup/db_setup.php');
-$sql = "USE tbiswas2_php;";
+require_once('db_setup.php');
+$sql = "USE ngu3;";
 if ($conn->query($sql) === TRUE) {
    // echo "using Database tbiswas2_company";
 } else {
@@ -25,52 +25,44 @@ if ($conn->query($sql) === TRUE) {
 }
 
 // Query:
-$sql = "SELECT * FROM DISH;";
+$sql = "SELECT * FROM UROB_Dish;";
 $result = $conn->query($sql);
-
-if ($result === TRUE) {
-    //echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-} 
 ?>
 <?php
 if($result->num_rows > 0){
 ?>
-<?php 
-while ($row = $result->fetch_assoc()) {
-?>
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12 blog-main">
-			<div class="col-md-3">
-				<div class="thumbnail">
-					<a href=<?php echo $row['dish_img']?>>
-						<img src=<?php echo $row['dish_img']?>; alt="Lights" style="width:100%">
-						<div class="caption">
-							<table class="table">
-								<tbody>
-								<tr>
-									<td><h4><?php echo $row['restaurant_id']?></h4></td>
-								</tr>
-								<tr>
-									<td><h4><?php echo $row['dname']?></h4></td>
-								</tr>
-								<tr>
-									<td><h4><?php echo $row['dprice']?></h4></td>
-								</tr>
-								</tbody>
-							</table>
-						</div>
-					</a>
-				</div>
-			</div> <!-- end of col-md-3 -->
+			<?php 
+			while ($row = $result->fetch_assoc()) {
+			?>
+			<div class="col-sm-offset-1 col-sm-10">
+              <div class="col-sm-3">
+              	<div>
+              		<a href="">
+              			<img src=<?php echo $row['dish_img']?> class="img-thumbnail" width="100%" height="100%" alt="Lights">
+              		</a>
+              	</div>
+              </div>
+              <div class="col-sm-5 text-left">
+                <p><label>Dish name:</label><?php echo $row['restaurant_id']?></p>
+                <p><label>Restuarant:</label><?php echo $row['dname']?></p>
+                <p><label>Price:</label><?php echo $row['dprice']?></p>
+              </div>
+              <div class="col-sm-2 mx-auto">
+                <button class="btn btn-primary">Remove</button>
+              </div>
+            </div> <!-- end of col-sm-offset-1 col-sm-10 -->
+			<?php
+			} // end of while
+			?>
 		</div> <!--  end of block-main -->
 	</div> <!-- end of row -->
 </div> <!-- end of container -->
 <?php
-} // end of while
 } // end of if
+$conn->close();
 ?>
 </body>
 </html>

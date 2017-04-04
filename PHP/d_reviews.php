@@ -18,8 +18,8 @@
 <div class="col-md-12 blog-main">
 <?php
 // DB setup
-require_once('../../../secure_dbsetup/db_setup.php');
-$sql = "USE tbiswas2_php;";
+require_once('db_setup.php');
+$sql = "USE ngu3;";
 if ($conn->query($sql) === TRUE) {
    // echo "using Database tbiswas2_company";
 } else {
@@ -27,14 +27,8 @@ if ($conn->query($sql) === TRUE) {
 }
 
 // Query:
-$sql = "SELECT * FROM DISH_COMMENT;";
+$sql = "SELECT * FROM UROB_Dcomment;";
 $result = $conn->query($sql);
-
-if ($result === TRUE) {
-    //echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-} 
 ?>
 <?php
 if($result->num_rows > 0){
@@ -43,7 +37,9 @@ if($result->num_rows > 0){
 	<thead>
 		<tr>Comment ID</tr>
 		<tr>User ID</tr>
+		<tr>Restaurant ID</tr>
 		<tr>Dish Name</tr>
+		<tr>Time</tr>
 		<tr>Score</tr>
 		<tr>Comment</tr>
 	</thead>
@@ -51,11 +47,15 @@ if($result->num_rows > 0){
 <?php
 while ($row = $result->fetch_assoc()) {
 ?>
-	<tr><td><?php echo $row['comment_id'] ?></td></tr>
-	<tr><td><?php echo $row['user_id'] ?></td></tr>
-	<tr><td><?php echo $row['dname']?></td></tr>
-	<tr><td><?php echo $row['score'] ?></td></tr>
-	<tr><td><?php echo $row['comment'] ?></td></tr>
+	<tr>
+		<td><?php echo $row['dcomment_id'] ?></td>
+		<td><?php echo $row['user_id'] ?></td>
+		<td><?php echo $row['restaurant_id'] ?></td>
+		<td><?php echo $row['dname']?></td>
+		<td><?php echo $row['time'] ?></td>
+		<td><?php echo $row['dscore'] ?></td>
+		<td><?php echo $row['dcomment'] ?></td>
+	</tr>
 <?php
 }// end of while
 }// end of if
@@ -66,6 +66,8 @@ while ($row = $result->fetch_assoc()) {
 </div> <!-- end of blog-main -->	
 </div> <!-- end of row -->
 </div> <!-- end of container -->
-
+<?php
+$conn->close();
+?>
 </body>
 </html>

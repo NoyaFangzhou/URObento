@@ -15,8 +15,8 @@
 <?php
 
 // DB setup
-require_once('../../../secure_dbsetup/db_setup.php');
-$sql = "USE tbiswas2_php;";
+require_once('db_setup.php');
+$sql = "USE ngu3;";
 if ($conn->query($sql) === TRUE) {
    // echo "using Database tbiswas2_company";
 } else {
@@ -24,14 +24,8 @@ if ($conn->query($sql) === TRUE) {
 }
 
 // Query:
-$sql = "SELECT * FROM RESTAURANT;";
+$sql = "SELECT * FROM UROB_Restaurant;";
 $result = $conn->query($sql);
-
-if ($result === TRUE) {
-    //echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-} 
 ?>
 <?php
 if($result->num_rows > 0){
@@ -51,7 +45,7 @@ if($result->num_rows > 0){
 			          	</div>
 			    		<div class="panel-body">
 				    		<div class="col-sm-4">
-				    			<img src=<?php echo $row['restaurant_img']?>; class="img-rounded" style="height: 100%; width: 100%">
+				    			<img src=<?php echo $row['restaurant_img']?> class="img-rounded" style="height: 100%; width: 100%">
 	    					</div> <!-- end of col-xm-4 -->
 	    					<div class="col-sm-8">
 	    						<table class="table">
@@ -67,6 +61,9 @@ if($result->num_rows > 0){
 								      </tr>
 								      <tr>
 								        <td><h6><?php echo $row['rphone']?></h6></td>
+								      </tr>
+								      <tr>
+								        <td><h6><?php echo $row['is_open']?></h6></td>
 								      </tr>
 								    </tbody>
 								  </table>
