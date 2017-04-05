@@ -29,14 +29,14 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="./php/user_list.php">Customer</a></li>
-            <li><a href="./php/owner_list.php">Owner</a></li>
-            <li><a href="./php/restaurant_list.php">Restaurant</a></li>
-            <li><a href="./php/r_reviews.php">Restaurant Review</a></li>
-            <li><a href="./php/dish_list.php">Dish</a></li>
-            <li class="active"><a href="./php/d_reviews.php">Dish Review</a></li>
-            <li><a href="./php/order_list.php">Order</a></li>
-            <li><a href="./php/ordered_dish.php">Order Detail</a></li>
+            <li><a href="user_list.php">Customer</a></li>
+            <li><a href="owner_list.php">Owner</a></li>
+            <li><a href="restaurant_list.php">Restaurant</a></li>
+            <li><a href="r_reviews.php">Restaurant Review</a></li>
+            <li><a href="dish_list.php">Dish</a></li>
+            <li class="active"><a href="d_reviews.php">Dish Review</a></li>
+            <li><a href="order_list.php">Order</a></li>
+            <li><a href="ordered_dish.php">Order Detail</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
