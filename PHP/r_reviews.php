@@ -35,12 +35,14 @@ if($result->num_rows > 0){
 ?>
 <table>
 	<thead>
-		<tr>Comment ID</tr>
-		<tr>User ID</tr>
-		<tr>Restaurant ID</tr>
-		<tr>Time</tr>
-		<tr>Score</tr>
-		<tr>Comment</tr>
+		<tr>
+			<th>Comment ID</th>
+			<th>User ID</th>
+			<th>Restaurant ID</th>
+			<th>Time</th>
+			<th>Score</th>
+			<th>Comment</th>
+		</tr>
 	</thead>
 	<tbody>
 <?php

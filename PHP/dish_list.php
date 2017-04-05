@@ -37,23 +37,29 @@ if($result->num_rows > 0){
 			<?php 
 			while ($row = $result->fetch_assoc()) {
 			?>
-			<div class="col-sm-offset-1 col-sm-10">
-              <div class="col-sm-3">
-              	<div>
-              		<a href="">
-              			<img src=<?php echo $row['dish_img']?> class="img-thumbnail" width="100%" height="100%" alt="Lights">
-              		</a>
-              	</div>
-              </div>
-              <div class="col-sm-5 text-left">
-                <p><label>Dish name:</label><?php echo $row['restaurant_id']?></p>
-                <p><label>Restuarant:</label><?php echo $row['dname']?></p>
-                <p><label>Price:</label><?php echo $row['dprice']?></p>
-              </div>
-              <div class="col-sm-2 mx-auto">
-                <button class="btn btn-primary">Remove</button>
-              </div>
-            </div> <!-- end of col-sm-offset-1 col-sm-10 -->
+			<div class="panel panel-default">
+			        <div class="panel-heading">
+						Restaurant ID: <?php echo $row['restaurant_id']?>
+			        </div>
+		    		<div class="panel-body">
+			    		<div class="col-sm-4">
+			    			<a><img src=<?php echo $row['dish_img']?> class="thumbnail" style="height: 100%; width: 100%" alt="Lights"></a>
+    					</div> <!-- end of col-xm-4 -->
+    					<div class="col-sm-8">
+    						<table class="table">
+							    <tbody>
+							      <tr>
+							        <td><h4><?php echo $row['dname']?></h4></td>
+							      </tr>
+							      <tr>
+							      	<td><?php echo $row['dprice']?></td>
+							      </tr>
+							    </tbody>
+							</table>
+    					</div>
+					</div> <!-- end of panel-body -->
+					<div class="panel-footer"></div> 
+		    </div> <!-- panel-default --> 
 			<?php
 			} // end of while
 			?>

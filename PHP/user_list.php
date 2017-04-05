@@ -32,13 +32,15 @@ $result = $conn->query($sql);
 <?php
 if($result->num_rows > 0){
 ?>
-<table>
+<table class="table table-striped">
 	<thead>
-		<tr>User ID</tr>
-		<tr>Username</tr>
-		<tr>Email</tr>
-		<tr>Phone</tr>
-		<tr>Address</tr>
+		<tr>
+			<th>User ID</th>
+			<th>Username</th>
+			<th>Email</th>
+			<th>Phone</th>
+			<th>Address</th>
+		</tr>
 	</thead>
 	<tbody>
 <?php

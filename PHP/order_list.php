@@ -33,31 +33,35 @@ $result = $conn->query($sql);
 <?php
 if($result->num_rows > 0){
 ?>
-<table>
+<table class="table table-striped">
 	<thead>
-		<tr>Order ID</tr>
-		<tr>User ID</tr>
-		<tr>Restaurant ID</tr>
-		<tr>Deliver Address</tr>
-		<tr>Time</tr>
-		<tr>Status</tr>
-		<tr>Total Price</tr>
-		<tr>Pay Method</tr>
-		<tr>Requirement</tr>
+		<tr>
+			<th>Order ID</th>
+			<th>User ID</th>
+			<th>Restaurant ID</th>
+			<th>Deliver Address</th>
+			<th>Time</th>
+			<th>Status</th>
+			<th>Total Price</th>
+			<th>Pay Method</th>
+			<th>Requirement</th>
+		</tr>
 	</thead>
 	<tbody>
 <?php
 while ($row = $result->fetch_assoc()) {
 ?>
-	<tr><td><?php echo $row['order_id'] ?></td></tr>
-	<tr><td><?php echo $row['user_id'] ?></td></tr>
-	<tr><td><?php echo $row['restaurant_id'] ?></td></tr>
-	<tr><td><?php echo $row['delivery_address'] ?></td></tr>
-	<tr><td><?php echo $row['time'] ?></td></tr>
-	<tr><td><?php echo $row['status'] ?></td></tr>
-	<tr><td><?php echo $row['total_price'] ?></td></tr>
-	<tr><td><?php echo $row['paying_method'] ?></td></tr>
-	<tr><td><?php echo $row['requirement'] ?></td></tr>
+	<tr>
+		<td><?php echo $row['order_id'] ?></td>
+		<td><?php echo $row['user_id'] ?></td>
+		<td><?php echo $row['restaurant_id'] ?></td>
+		<td><?php echo $row['delivery_address'] ?></td>
+		<td><?php echo $row['time'] ?></td>
+		<td><?php echo $row['status'] ?></td>
+		<td><?php echo $row['total_price'] ?></td>
+		<td><?php echo $row['paying_method'] ?></td>
+		<td><?php echo $row['requirement'] ?></td>
+	</tr>
 <?php
 }// end of while
 }// end of if

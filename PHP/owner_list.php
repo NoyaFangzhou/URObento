@@ -33,11 +33,13 @@ $result = $conn->query($sql);
 <?php
 if($result->num_rows > 0){
 ?>
-<table>
+<table class="table table-striped"> 
 	<thead>
-		<tr>User ID</tr>
-		<tr>Username</tr>
-		<tr>Restaurant ID</tr>
+		<tr>
+			<th>User ID</th>
+			<th>Username</th>
+			<th>Restaurant ID</th>
+		</tr>
 	</thead>
 	<tbody>
 <?php
