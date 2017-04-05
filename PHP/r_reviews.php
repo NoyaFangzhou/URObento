@@ -12,6 +12,36 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./welcome.html">Obento</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="./php/user_list.php">Customer</a></li>
+            <li><a href="./php/owner_list.php">Owner</a></li>
+            <li><a href="./php/restaurant_list.php">Restaurant</a></li>
+            <li class="active"><a href="./php/r_reviews.php">Restaurant Review</a></li>
+            <li><a href="./php/dish_list.php">Dish</a></li>
+            <li><a href="./php/d_reviews.php">Dish Review</a></li>
+            <li><a href="./php/order_list.php">Order</a></li>
+            <li><a href="./php/ordered_dish.php">Order Detail</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>   
+</div>
 <h1 align="center">Restaurant Review List</h1>
 <div class="container">
 <div class="row">
@@ -33,7 +63,7 @@ $result = $conn->query($sql);
 <?php
 if($result->num_rows > 0){
 ?>
-<table>
+<table class="table table-striped">
 	<thead>
 		<tr>
 			<th>Comment ID</th>
