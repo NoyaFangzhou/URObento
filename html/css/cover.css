@@ -61,6 +61,36 @@ body {
   padding: 30px;
 }
 
+.top-buffer {
+  word-wrap: break-word;
+  margin-top:10px; 
+}
+.rest-name{
+  font-size: 25px;
+  font-family: Lucida Sans Unicode;
+}
+
+.font-black{
+  color: black;
+}
+.font-blue{
+  color: blue;
+}
+.div-bg-gray{
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color:  white; 
+}
+.div-bg-white{
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color:  white; 
+}
+.text-left{
+  text-align: left;
+}
 
 /*
  * Header
