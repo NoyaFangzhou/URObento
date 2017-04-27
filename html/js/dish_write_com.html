@@ -65,94 +65,47 @@
         </div>
         <div class="container">
           <div class="row div-bg-white text-left top-buffer">
-              <form class="form-inline" action="#" method="post">
-                  <div class="col-sm-3">
-                    <img src="./img/sample.jpg" class="img-thumbnail" width="300" height="150" alt="Responsive image">
-                  </div>
-                  <div class="col-sm-3 text-left font-black">
-                    <h1>Shiki</h1>
-                    <p><label>Info:</label><input type="text" class="form-control" name="info" value="describe the restaurant"/> </p>
-                    <p><label>Address:</label></p>
-                    <p><input type="text" class="form-control" name="addr" value="2185 Monroe Ave, Rochester, NY 14618"/></p>
-                    <p><label>Phone:</label></p>
-                    <p><input type="text" class="form-control" name="phone" value="(585)319-3136"/></p>
-                    <p><label>Open or Close:</label></p>
-                    <p>
-                      <select class="form-control" name="isopen">
-                        <option value="1">open</option>
-                        <option value="0">closed</option>
-                      </select>
-                    </p>
-                    <p><input type="button" class="btn btn-primary" value="Save"></p>
-                  </div>
-              </form>
+              <div class="col-sm-3">
+                <img src="./img/sample.jpg" class="img-thumbnail" width="300" height="150" alt="Responsive image">
+              </div>
+              <div class="col-sm-8 text-left font-black"><!-- change col3 to col8 -->
+                <h1>Sashimi</h1>
+                <p><label>Price:</label>$20</p>
+              </div>
+              <!-- delete a div here -->
           </div>
 
 
-        <!-- Title -->
+        <!-- Title -->        
         <div class="row div-bg-white text-left top-buffer font-black">
             <div class="col-lg-12">
                   <ul class="nav nav-tabs">
-                    <li role="presentation"><a href="manage.html" style="color:black">Menu</a></li>
-                    <li role="presentation" class="active"><a href="order_view.html" style="color:black">View Order</a></li>
+                    <li role="presentation"><a href="restaurant_review.html" style="color:black">Reviews</a></li>
+                    <li role="presentation" class="active"><a href="write_review.html" style="color:black">Write Review</a></li>
                   </ul>
             </div>
-
-            <div class="col-lg-12">
-                <table class="table table-hover">
-                  <tr>
-                    <td>#</td>
-                    <td>User</td>
-                    <td>Time</td>
-                    <td>Content</td>
-                    <td>Address</td>
-                    <td>Phone</td>
-                    <td>Note</td>
-                    <td>Amount</td>
-                    <td>Status</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>subo</td>
-                    <td>4/22/2017 15:40:00</td>
-                    <td>
-                      <p>sashimi X 2</p>
-                      <p>rice X 1</p>
-                    <td>404 upk</td>
-                    <td>585254111</td>
-                    <td>please in 1 hour</td>
-                    <td>$40</td>
-                    <td>In Delivery</td>
-                    <td>
-                    <select name="status">
-                      <option value="1">Ordered</option>
-                      <option value="2">Cooking</option>
-                      <option value="3">In Delivery</option>
-                      <option value="4">Delivered</option>
-                    </select>
-                    <button type="button" class="btn btn-primary btn-sm">Update</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>subo</td>
-                    <td>4/22/2017 15:45:00</td>
-                    <td>
-                      <p>sashimi X 3</p>
-                      <p>rice X 1</p>
-                    <td>404 upk</td>
-                    <td>585254111</td>
-                    <td>i am hungry</td>
-                    <td>$50</td>
-                    <td>Delivered</td>
-                    <td><span class="label label-success">Finished</span></td>
-                  </tr>
-                </table>
-
+            <div class=" col-lg-12 text-left top-buffer">
+              
+              <h2>Leave a review:</h2>
+              <form action="#" method="post">
+                <p><label>Comment:</label></p>
+                <textarea class="form-control" rows="3"></textarea>
+                <p>
+                  <label>Rate:</label>
+                  <select class="form-control" name="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </p>
+                <p class="col-lg-12"><input class="btn btn-primary" type="button" value="submit"></p>
+              </form>
+              
+              
             </div>
             
-
         </div>
         <!-- /.row -->
 
