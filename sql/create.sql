@@ -15,7 +15,7 @@ drop table if exists UROB_Restaurant;
 drop table if exists UROB_Customer;
 
 create table UROB_Customer(
-	user_id int NOT NULL,
+	user_id int NOT NULL AUTO_INCREMENT,
 	username varchar(50) NOT NULL,
 	password char(40) NOT NULL,
 	salt char(40) NOT NULL,
@@ -26,7 +26,7 @@ create table UROB_Customer(
 );
 
 create table UROB_Restaurant(
-	restaurant_id int NOT NULL,
+	restaurant_id int NOT NULL AUTO_INCREMENT,
 	rname varchar(30) NOT NULL,
 	raddress varchar(50) NOT NULL,
 	rphone varchar(20) NOT NULL,
@@ -37,7 +37,7 @@ create table UROB_Restaurant(
 );
 
 create table UROB_Owner(
-	user_id int NOT NULL,
+	user_id int NOT NULL AUTO_INCREMENT,
 	username varchar(50) NOT NULL,
 	password char(40) NOT NULL,
 	salt char(40) NOT NULL,
@@ -47,7 +47,7 @@ create table UROB_Owner(
 );
 
 create table UROB_Order(
-	order_id int NOT NULL,
+	order_id int NOT NULL AUTO_INCREMENT,
 	user_id int NOT NULL,
 	restaurant_id int NOT NULL, 
 	delivery_address varchar(50) NOT NULL,
@@ -76,6 +76,7 @@ CREATE TABLE UROB_Orderdishes(
 	order_id int NOT NULL,
 	restaurant_id int NOT NULL,
 	dname varchar(40) NOT NULL,
+	quantity int default 1,
 	PRIMARY KEY (order_id, restaurant_id, dname),
 	CONSTRAINT FOREIGN KEY (order_id) REFERENCES UROB_Order (order_id),
 	CONSTRAINT FOREIGN KEY (restaurant_id) REFERENCES UROB_Restaurant (restaurant_id),
@@ -84,7 +85,7 @@ CREATE TABLE UROB_Orderdishes(
 
 
 create table UROB_Rcomment(
-	rcomment_id int NOT NULL,
+	rcomment_id int NOT NULL AUTO_INCREMENT,
 	restaurant_id int NOT NULL,
 	user_id int NOT NULL,	
 	rscore int(1) NOT NULL,
@@ -97,7 +98,7 @@ create table UROB_Rcomment(
 
 
 create table UROB_Dcomment(
-	dcomment_id int NOT NULL,
+	dcomment_id int NOT NULL AUTO_INCREMENT,
 	restaurant_id int NOT NULL,
 	user_id int NOT NULL,
 	dname varchar(40) NOT NULL,	
