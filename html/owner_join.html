@@ -61,17 +61,17 @@
         <div class="container">
             <h1 class="cover-heading">Owner Sign up</h1>
             <div class="col-sm-offset-4 col-sm-6">
-            <form class="form-horizontal" method="post" action="./php/ownerAccessHandler.php" id="owner_signup_info">
+            <form class="form-horizontal" method="post" action="./php/ownerJoinHandler.php" id="owner_signup_info">
               <div class="form-group">
                 <label for="username" class="col-sm-2 control-label">Username</label>
                 <div class="col-sm-5">
-                  <input type="text" class="form-control" id="username" placeholder="Unique ID">
+                  <input type="text" class="form-control" id="username" name="username" placeholder="Unique ID">
                 </div>
               </div>
               <div class="form-group">
                 <label for="password" class="col-sm-2 control-label">Password</label>
                 <div class="col-sm-5">
-                  <input type="password" class="form-control" id="password" placeholder="Password">
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                 </div>
               </div>
               
